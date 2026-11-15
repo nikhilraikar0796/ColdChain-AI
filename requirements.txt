@@ -1,0 +1,17 @@
+
+# ColdChain-AI
+# Python 3.12.x
+# Phase 0: Project foundation and data engineering
+
+# Data processing
+numpy==2.3.5
+pandas==3.0.5
+openpyxl==3.1.5
+
+# SQL Server connectivity
+pyodbc==5.5.0
+SQLAlchemy==2.0.52
+
+# Environment and configuration
+python-dotenv==1.2.3
+pydantic-settings==2.15.0

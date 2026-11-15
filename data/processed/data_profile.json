@@ -1,0 +1,348 @@
+{
+    "project": "ColdChain-AI",
+    "dataset": "dynamic_supply_chain_logistics_dataset.csv",
+    "basic_information": {
+        "total_rows": 32065,
+        "total_columns": 26,
+        "memory_usage_mb": 9.74,
+        "column_names": [
+            "timestamp",
+            "vehicle_gps_latitude",
+            "vehicle_gps_longitude",
+            "fuel_consumption_rate",
+            "eta_variation_hours",
+            "traffic_congestion_level",
+            "warehouse_inventory_level",
+            "loading_unloading_time",
+            "handling_equipment_availability",
+            "order_fulfillment_status",
+            "weather_condition_severity",
+            "port_congestion_level",
+            "shipping_costs",
+            "supplier_reliability_score",
+            "lead_time_days",
+            "historical_demand",
+            "iot_temperature",
+            "cargo_condition_status",
+            "route_risk_level",
+            "customs_clearance_time",
+            "driver_behavior_score",
+            "fatigue_monitoring_score",
+            "disruption_likelihood_score",
+            "delay_probability",
+            "risk_classification",
+            "delivery_time_deviation"
+        ]
+    },
+    "data_quality": {
+        "duplicate_rows": 0,
+        "missing_value_count": 0,
+        "columns_with_missing_values": {},
+        "missing_percentage": {},
+        "data_types": {
+            "timestamp": "str",
+            "vehicle_gps_latitude": "float64",
+            "vehicle_gps_longitude": "float64",
+            "fuel_consumption_rate": "float64",
+            "eta_variation_hours": "float64",
+            "traffic_congestion_level": "float64",
+            "warehouse_inventory_level": "float64",
+            "loading_unloading_time": "float64",
+            "handling_equipment_availability": "float64",
+            "order_fulfillment_status": "float64",
+            "weather_condition_severity": "float64",
+            "port_congestion_level": "float64",
+            "shipping_costs": "float64",
+            "supplier_reliability_score": "float64",
+            "lead_time_days": "float64",
+            "historical_demand": "float64",
+            "iot_temperature": "float64",
+            "cargo_condition_status": "float64",
+            "route_risk_level": "float64",
+            "customs_clearance_time": "float64",
+            "driver_behavior_score": "float64",
+            "fatigue_monitoring_score": "float64",
+            "disruption_likelihood_score": "float64",
+            "delay_probability": "float64",
+            "risk_classification": "str",
+            "delivery_time_deviation": "float64"
+        },
+        "required_columns_missing": []
+    },
+    "numerical_analysis": {
+        "vehicle_gps_latitude": {
+            "count": 32065.0,
+            "mean": 38.024,
+            "std": 6.918,
+            "min": 30.0,
+            "25%": 31.281,
+            "50%": 36.414,
+            "75%": 44.454,
+            "max": 50.0
+        },
+        "vehicle_gps_longitude": {
+            "count": 32065.0,
+            "mean": -90.117,
+            "std": 17.369,
+            "min": -120.0,
+            "25%": -106.254,
+            "50%": -86.293,
+            "75%": -73.079,
+            "max": -70.0
+        },
+        "fuel_consumption_rate": {
+            "count": 32065.0,
+            "mean": 8.012,
+            "std": 4.265,
+            "min": 5.0,
+            "25%": 5.02,
+            "50%": 5.636,
+            "75%": 9.67,
+            "max": 20.0
+        },
+        "eta_variation_hours": {
+            "count": 32065.0,
+            "mean": 2.893,
+            "std": 2.274,
+            "min": -2.0,
+            "25%": 1.186,
+            "50%": 3.882,
+            "75%": 4.884,
+            "max": 5.0
+        },
+        "traffic_congestion_level": {
+            "count": 32065.0,
+            "mean": 4.991,
+            "std": 3.532,
+            "min": 0.0,
+            "25%": 1.475,
+            "50%": 4.981,
+            "75%": 8.535,
+            "max": 10.0
+        },
+        "warehouse_inventory_level": {
+            "count": 32065.0,
+            "mean": 299.255,
+            "std": 323.444,
+            "min": 0.0,
+            "25%": 16.052,
+            "50%": 157.288,
+            "75%": 540.598,
+            "max": 999.999
+        },
+        "loading_unloading_time": {
+            "count": 32065.0,
+            "mean": 2.292,
+            "std": 1.554,
+            "min": 0.5,
+            "25%": 0.775,
+            "50%": 1.917,
+            "75%": 3.734,
+            "max": 5.0
+        },
+        "handling_equipment_availability": {
+            "count": 32065.0,
+            "mean": 0.303,
+            "std": 0.326,
+            "min": 0.0,
+            "25%": 0.017,
+            "50%": 0.16,
+            "75%": 0.554,
+            "max": 1.0
+        },
+        "order_fulfillment_status": {
+            "count": 32065.0,
+            "mean": 0.601,
+            "std": 0.346,
+            "min": 0.0,
+            "25%": 0.277,
+            "50%": 0.681,
+            "75%": 0.938,
+            "max": 1.0
+        },
+        "weather_condition_severity": {
+            "count": 32065.0,
+            "mean": 0.498,
+            "std": 0.353,
+            "min": 0.0,
+            "25%": 0.144,
+            "50%": 0.496,
+            "75%": 0.85,
+            "max": 1.0
+        },
+        "port_congestion_level": {
+            "count": 32065.0,
+            "mean": 6.978,
+            "std": 3.251,
+            "min": 0.0,
+            "25%": 4.514,
+            "50%": 8.383,
+            "75%": 9.838,
+            "max": 10.0
+        },
+        "shipping_costs": {
+            "count": 32065.0,
+            "mean": 459.374,
+            "std": 312.183,
+            "min": 100.0,
+            "25%": 154.017,
+            "50%": 388.997,
+            "75%": 753.007,
+            "max": 1000.0
+        },
+        "supplier_reliability_score": {
+            "count": 32065.0,
+            "mean": 0.501,
+            "std": 0.354,
+            "min": 0.0,
+            "25%": 0.145,
+            "50%": 0.503,
+            "75%": 0.854,
+            "max": 1.0
+        },
+        "lead_time_days": {
+            "count": 32065.0,
+            "mean": 5.228,
+            "std": 4.523,
+            "min": 1.0,
+            "25%": 1.237,
+            "50%": 3.298,
+            "75%": 8.626,
+            "max": 15.0
+        },
+        "historical_demand": {
+            "count": 32065.0,
+            "mean": 6022.001,
+            "std": 3427.638,
+            "min": 100.003,
+            "25%": 2822.608,
+            "50%": 6785.123,
+            "75%": 9374.253,
+            "max": 10000.0
+        },
+        "iot_temperature": {
+            "count": 32065.0,
+            "mean": 0.045,
+            "std": 14.187,
+            "min": -10.0,
+            "25%": -9.931,
+            "50%": -7.859,
+            "75%": 6.024,
+            "max": 40.0
+        },
+        "cargo_condition_status": {
+            "count": 32065.0,
+            "mean": 0.297,
+            "std": 0.322,
+            "min": 0.0,
+            "25%": 0.017,
+            "50%": 0.155,
+            "75%": 0.541,
+            "max": 1.0
+        },
+        "route_risk_level": {
+            "count": 32065.0,
+            "mean": 7.001,
+            "std": 3.236,
+            "min": 0.0,
+            "25%": 4.593,
+            "50%": 8.386,
+            "75%": 9.836,
+            "max": 10.0
+        },
+        "customs_clearance_time": {
+            "count": 32065.0,
+            "mean": 2.296,
+            "std": 1.556,
+            "min": 0.5,
+            "25%": 0.776,
+            "50%": 1.938,
+            "75%": 3.751,
+            "max": 5.0
+        },
+        "driver_behavior_score": {
+            "count": 32065.0,
+            "mean": 0.498,
+            "std": 0.354,
+            "min": 0.0,
+            "25%": 0.144,
+            "50%": 0.499,
+            "75%": 0.851,
+            "max": 1.0
+        },
+        "fatigue_monitoring_score": {
+            "count": 32065.0,
+            "mean": 0.601,
+            "std": 0.346,
+            "min": 0.0,
+            "25%": 0.278,
+            "50%": 0.683,
+            "75%": 0.937,
+            "max": 1.0
+        },
+        "disruption_likelihood_score": {
+            "count": 32065.0,
+            "mean": 0.804,
+            "std": 0.279,
+            "min": 0.0,
+            "25%": 0.694,
+            "50%": 0.958,
+            "75%": 0.999,
+            "max": 1.0
+        },
+        "delay_probability": {
+            "count": 32065.0,
+            "mean": 0.699,
+            "std": 0.325,
+            "min": 0.0,
+            "25%": 0.456,
+            "50%": 0.84,
+            "75%": 0.982,
+            "max": 1.0
+        },
+        "delivery_time_deviation": {
+            "count": 32065.0,
+            "mean": 5.178,
+            "std": 4.158,
+            "min": -2.0,
+            "25%": 1.269,
+            "50%": 6.114,
+            "75%": 9.249,
+            "max": 10.0
+        }
+    },
+    "categorical_analysis": {
+        "timestamp": {
+            "2021-01-01 00:00:00": 1,
+            "2021-01-01 01:00:00": 1,
+            "2021-01-01 02:00:00": 1,
+            "2021-01-01 03:00:00": 1,
+            "2021-01-01 04:00:00": 1,
+            "2021-01-01 05:00:00": 1,
+            "2021-01-01 06:00:00": 1,
+            "2021-01-01 07:00:00": 1,
+            "2021-01-01 08:00:00": 1,
+            "2021-01-01 09:00:00": 1
+        },
+        "risk_classification": {
+            "High Risk": 23944,
+            "Moderate Risk": 5011,
+            "Low Risk": 3110
+        }
+    },
+    "business_validation": {
+        "invalid_latitude_count": 0,
+        "unparseable_latitude_count": 0,
+        "invalid_longitude_count": 0,
+        "unparseable_longitude_count": 0,
+        "invalid_delay_probability_count": 0,
+        "unparseable_delay_probability_count": 0,
+        "invalid_timestamp_count": 0,
+        "earliest_timestamp": "2021-01-01 00:00:00",
+        "latest_timestamp": "2024-08-29 00:00:00",
+        "temperature_unparseable_count": 0,
+        "temperature_min": -10.0,
+        "temperature_max": 39.99988649386724,
+        "temperature_mean": 0.045
+    }
+}
