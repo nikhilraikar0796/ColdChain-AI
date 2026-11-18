@@ -46,3 +46,7 @@ data/policy/
 
 # Generated processed dataset
 data/processed/cleaned_supply_chain_data.csv
+
+# Generated operational rule-engine reports
+data/processed/rule_evaluation_report.json
+data/processed/triggered_alerts.csv

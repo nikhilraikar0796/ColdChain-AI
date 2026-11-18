@@ -1,0 +1,105 @@
+======================================================================
+PHASE 2 - TARGET LEAKAGE AUDIT
+======================================================================
+Dataset rows             : 32,065
+Valid comparison rows    : 32,065
+Candidate target         : delivery_time_deviation
+Potential leakage feature: eta_variation_hours
+
+1. DESCRIPTIVE STATISTICS
+
+delivery_time_deviation
+count    32065.0000
+mean         5.1776
+std          4.1580
+min         -2.0000
+25%          1.2692
+50%          6.1137
+75%          9.2492
+max         10.0000
+Unique values: 32,065
+
+eta_variation_hours
+count    32065.0000
+mean         2.8931
+std          2.2740
+min         -2.0000
+25%          1.1857
+50%          3.8821
+75%          4.8844
+max          5.0000
+Unique values: 32,065
+
+2. TARGET VS POTENTIAL LEAKAGE FEATURE
+
+3. DIRECT VALUE COMPARISON
+Exact matches              : 0
+Exact match percentage     : 0.00%
+Matches after rounding 2dp : 24
+Rounded match percentage   : 0.07%
+
+Difference (target - ETA variation):
+count    32065.0000
+mean         2.2846
+std          4.7407
+min         -7.0000
+25%         -1.4347
+50%          3.0178
+75%          5.4650
+max         11.9993
+
+Absolute difference:
+count    32065.0000
+mean         4.4873
+std          2.7490
+min          0.0001
+25%          2.3297
+50%          4.4735
+75%          6.0637
+max         11.9993
+
+4. LINEAR REGRESSION DIAGNOSTIC
+Intercept  : 5.181592
+Coefficient: -0.001363
+R-squared  : 0.000001
+
+5. OTHER FEATURE RELATIONSHIPS
+ETA variation is excluded from this analysis.
+
+Feature relationships ranked by absolute Spearman correlation:
+                        feature  pearson  spearman  rows
+          port_congestion_level  0.01061   0.01183 32065
+          fuel_consumption_rate  0.01250   0.01089 32065
+         customs_clearance_time -0.00924  -0.00632 32065
+      warehouse_inventory_level -0.00746  -0.00616 32065
+     supplier_reliability_score  0.00438   0.00471 32065
+         loading_unloading_time  0.00337   0.00400 32065
+          driver_behavior_score -0.00397  -0.00346 32065
+       traffic_congestion_level  0.00051  -0.00321 32065
+                 lead_time_days -0.00246  -0.00319 32065
+          vehicle_gps_longitude -0.00164  -0.00244 32065
+handling_equipment_availability -0.00464  -0.00195 32065
+                iot_temperature -0.00057   0.00169 32065
+           vehicle_gps_latitude  0.00042   0.00141 32065
+               route_risk_level -0.00008  -0.00097 32065
+     weather_condition_severity -0.00054   0.00038 32065
+                 shipping_costs  0.00250   0.00024 32065
+       fatigue_monitoring_score  0.00349  -0.00005 32065
+              historical_demand  0.00062  -0.00005 32065
+
+Feature correlation CSV saved: C:\Users\VICTUS\Desktop\Data Science\Gen AI Projects\ColdChain-AI\data\processed\target_feature_correlations_without_eta.csv
+
+6. ORDER FULFILLMENT STATUS VALIDATION
+Unique values: 32,065
+Is binary 0/1: False
+Minimum      : 0.000001
+Maximum      : 1.000000
+
+Sample unique values:
+[np.float64(1.3177636062343215e-06), np.float64(1.7096160979708443e-06), np.float64(2.5991805687891173e-06), np.float64(2.6210420763071847e-06), np.float64(2.6667764983600323e-06), np.float64(4.346301291738074e-06), np.float64(6.086780848049429e-06), np.float64(6.324432397168434e-06), np.float64(6.703619392339971e-06), np.float64(6.792626763783513e-06), np.float64(6.87032042364791e-06), np.float64(8.440670404360214e-06), np.float64(8.57445361409961e-06), np.float64(9.483311868419604e-06), np.float64(1.0663230470126805e-05), np.float64(1.0692825263693132e-05), np.float64(1.1055467743700534e-05), np.float64(1.1704233281662024e-05), np.float64(1.3609774001702542e-05), np.float64(1.4360917235923251e-05)]
+
+7. PRELIMINARY INTERPRETATION
+No strong direct association detected. This does not prove that ETA variation is safe to use.
+WARNING: order_fulfillment_status is not binary 0/1 in the observed dataset, contradicting its published description.
+
+IMPORTANT: Correlation alone cannot establish leakage. The data-generation formula and real-world event timing must be verified.

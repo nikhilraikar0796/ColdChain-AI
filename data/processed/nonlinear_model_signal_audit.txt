@@ -1,0 +1,62 @@
+NONLINEAR MODEL SIGNAL AUDIT
+============================================================
+Target: delivery_time_deviation
+Total records: 32065
+Training rows: 25652
+Testing rows: 6413
+Number of features: 18
+Training period: 2021-01-01 00:00:00 to 2023-12-05 19:00:00
+Testing period: 2023-12-05 20:00:00 to 2024-08-29 00:00:00
+
+FEATURES
+------------------------------------------------------------
+vehicle_gps_latitude
+vehicle_gps_longitude
+fuel_consumption_rate
+traffic_congestion_level
+warehouse_inventory_level
+loading_unloading_time
+handling_equipment_availability
+weather_condition_severity
+port_congestion_level
+shipping_costs
+supplier_reliability_score
+lead_time_days
+historical_demand
+iot_temperature
+route_risk_level
+customs_clearance_time
+driver_behavior_score
+fatigue_monitoring_score
+
+MODEL COMPARISON
+------------------------------------------------------------
+                model      mae     rmse        r2
+        Mean baseline 3.695906 4.163646 -0.000073
+    Linear regression 3.698446 4.167392 -0.001873
+ExtraTrees regression 3.713070 4.181086 -0.008468
+
+ExtraTrees MAE improvement vs baseline: -0.4644%
+ExtraTrees RMSE improvement vs baseline: -0.4189%
+
+TOP 10 EXTRA TREES FEATURE IMPORTANCES
+------------------------------------------------------------
+                   feature  importance
+     driver_behavior_score    0.060079
+  traffic_congestion_level    0.059951
+weather_condition_severity    0.059457
+supplier_reliability_score    0.059160
+         historical_demand    0.059016
+    loading_unloading_time    0.058782
+      vehicle_gps_latitude    0.058508
+            shipping_costs    0.058419
+  fatigue_monitoring_score    0.057899
+     vehicle_gps_longitude    0.057847
+
+IMPORTANT CAVEATS
+------------------------------------------------------------
+This is a diagnostic experiment, not a production model.
+No hyperparameter tuning was performed.
+Feature importance does not establish causation.
+Weak performance does not prove that the dataset is synthetic.
+Dataset provenance, target-generation methodology and entity semantics remain unverified.

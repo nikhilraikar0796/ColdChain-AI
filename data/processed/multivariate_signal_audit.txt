@@ -1,0 +1,54 @@
+======================================================================
+MULTIVARIATE PREDICTIVE SIGNAL RESULTS
+======================================================================
+Total observations : 32,065
+Training rows      : 25,652
+Testing rows       : 6,413
+Features used      : 18
+
+Features:
+- vehicle_gps_latitude
+- vehicle_gps_longitude
+- fuel_consumption_rate
+- traffic_congestion_level
+- warehouse_inventory_level
+- loading_unloading_time
+- handling_equipment_availability
+- weather_condition_severity
+- port_congestion_level
+- shipping_costs
+- supplier_reliability_score
+- lead_time_days
+- historical_demand
+- iot_temperature
+- route_risk_level
+- customs_clearance_time
+- driver_behavior_score
+- fatigue_monitoring_score
+
+Training period:
+2021-01-01 00:00:00 to 2023-12-05 19:00:00
+
+Testing period:
+2023-12-05 20:00:00 to 2024-08-29 00:00:00
+
+BASELINE - TRAINING MEAN PREDICTION
+MAE: 3.695906
+RMSE: 4.163646
+R2: -0.000073
+
+MULTIVARIATE LINEAR REGRESSION
+MAE: 3.698446
+RMSE: 4.167392
+R2: -0.001873
+
+MODEL IMPROVEMENT OVER BASELINE
+MAE improvement : -0.07%
+RMSE improvement: -0.09%
+
+INTERPRETATION
+The model does not outperform the test-set mean baseline in terms of squared error.
+
+IMPORTANT: This is a linear baseline diagnostic, not proof that nonlinear models will fail.
+The chronological split assumes the timestamp ordering represents a meaningful prediction timeline.
+No shipment identifiers are available, so independent shipment-level validation cannot be performed.
