@@ -236,24 +236,6 @@ Data validation, business-rule verification, and data licensing checks will be p
 
 \- Avoid exposing sensitive shipment information.
 
-
-
-\## 9. Reference Project
-
-
-
-Business and feature reference:
-
-
-
-https://github.com/nimowhyca/cold-chain-logistics-FDE-Project
-
-
-
-ColdChain-AI is an independent implementation. The reference repository is used to understand business requirements and compare functionality, not as a source for copying application code.
-
-
-
 \## 10. Development Status
 
 
