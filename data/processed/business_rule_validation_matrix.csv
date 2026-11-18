@@ -1,0 +1,5 @@
+rule_id,rule_name,condition,matching_records,percentage,required_fields,status,limitation
+SOP-01,Cold-chain temperature breach,iot_temperature > 4.0,8674,27.05,"iot_temperature, cargo_type",CONDITIONAL,Cargo category is missing; fresh-perishable applicability is unverified.
+SOP-02,Emergency cold-storage diversion candidate,iot_temperature > 4.0 AND eta_variation_hours > 1,6621,20.65,"iot_temperature, cargo_type, eta_variation_hours",CONDITIONAL,Cargo category and ETA field semantics require verification.
+SOP-03,Port congestion diversion,port_congestion_level > 7.0,19566,61.02,"port_congestion_level, port_name",NOT FULLY VERIFIABLE,Port identity is missing; LA/Long Beach applicability cannot be established.
+SOP-04,Tier 2 logistics escalation,risk_classification == 'High Risk' AND delay_probability > 0.65,15440,48.15,"risk_classification, delay_probability",EVALUATABLE,"Condition is evaluatable, but actual operational escalation is not recorded."

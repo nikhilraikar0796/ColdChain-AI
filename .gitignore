@@ -43,3 +43,6 @@ Thumbs.db
 # Source data - exclude until redistribution permissions are verified
 data/raw/
 data/policy/
+
+# Generated processed dataset
+data/processed/cleaned_supply_chain_data.csv
